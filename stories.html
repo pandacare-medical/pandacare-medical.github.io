@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PandaBridge — Real Stories &amp; Testimonials</title>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: #1a1a2e; line-height: 1.7; background: #fafafa;
+            padding: 0;
+        }
+        .page { max-width: 1000px; margin: 0 auto; padding: 40px 24px; }
+        h1 { text-align: center; color: #0f5c44; margin-bottom: 8px; font-size: 2rem; }
+        .subtitle { text-align: center; color: #777; margin-bottom: 40px; }
+        .video-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 28px;
+        }
+        .video-card {
+            background: white; border-radius: 12px; overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            transition: transform 0.2s;
+        }
+        .video-card:hover { transform: translateY(-4px); }
+        .video-thumb {
+            position: relative; padding-bottom: 56.25%; background: #1a7a5c;
+            display: flex; align-items: center; justify-content: center;
+            color: white; font-size: 2rem;
+        }
+        .video-thumb iframe {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            border: none;
+        }
+        .video-info { padding: 16px 18px; }
+        .video-info .topic {
+            display: inline-block; background: #e8f5f0; color: #1a7a5c;
+            padding: 2px 10px; border-radius: 20px; font-size: 0.72rem;
+            font-weight: 600; margin-bottom: 6px;
+        }
+        .video-info h3 { font-size: 1rem; margin: 8px 0 4px; }
+        .video-info p { font-size: 0.85rem; color: #666; }
+        .video-source {
+            font-size: 0.8rem; color: #999; margin-top: 8px;
+            display: flex; align-items: center; gap: 6px;
+        }
+        .video-source a { color: #1a7a5c; text-decoration: none; }
+        .video-source a:hover { text-decoration: underline; }
+
+        /* Placeholder for videos not yet embedded */
+        .placeholder-video {
+            position: relative; padding-bottom: 56.25%;
+            background: linear-gradient(135deg, #0f5c44, #1a7a5c);
+            display: flex; align-items: center; justify-content: center;
+        }
+        .placeholder-video .inner {
+            text-align: center; color: white; padding: 20px;
+        }
+        .placeholder-video .inner .emoji { font-size: 2.4rem; }
+        .placeholder-video .inner p { opacity: 0.8; font-size: 0.85rem; margin-top: 8px; }
+
+        .back-link {
+            text-align: center; margin: 30px 0;
+        }
+        .back-link a {
+            color: #1a7a5c; text-decoration: none; font-weight: 600;
+        }
+
+        /* CTA */
+        .cta-section {
+            text-align: center; margin: 50px 0 30px;
+        }
+        .cta-section h2 { margin-bottom: 16px; color: #0f5c44; }
+        .cta-section .btn {
+            display: inline-block; background: #1a7a5c; color: white;
+            padding: 14px 36px; border-radius: 8px; font-weight: 600;
+            text-decoration: none; font-size: 1.1rem;
+        }
+        .cta-section .btn:hover { background: #0f5c44; }
+
+        @media (max-width: 640px) {
+            h1 { font-size: 1.4rem; }
+            .video-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="page">
+
+    <div class="back-link">
+        <a href="index.html">← Back to PandaBridge</a>
+    </div>
+
+    <h1>Real Stories from Real Patients</h1>
+    <p class="subtitle">Watch what other international patients say about their medical experience in China</p>
+
+    <div class="video-grid">
+
+        <!-- ===== REAL VIDEOS (when available) ===== -->
+
+        <!-- Dental Implants -->
+        <div class="video-card">
+            <div class="placeholder-video">
+                <div class="inner">
+                    <div class="emoji">🦷</div>
+                    <p><strong>Dental Implants in China</strong></p>
+                    <p>YouTube · Coming soon</p>
+                </div>
+            </div>
+            <div class="video-info">
+                <span class="topic">Dental</span>
+                <h3>I Saved $10,000 on Dental Implants in China</h3>
+                <p>An American shares how he got 4 dental implants in Chengdu for the price of 1 in the US.</p>
+            </div>
+        </div>
+
+        <!-- Health Checkup -->
+        <div class="video-card">
+            <div class="placeholder-video">
+                <div class="inner">
+                    <div class="emoji">🏥</div>
+                    <p><strong>Full Body Checkup</strong></p>
+                    <p>YouTube · Coming soon</p>
+                </div>
+            </div>
+            <div class="video-info">
+                <span class="topic">Checkup</span>
+                <h3>My $500 Full Body Checkup in China (vs $5,000 in the US)</h3>
+                <p>Detailed walkthrough of a comprehensive health screening at a Chengdu hospital.</p>
+            </div>
+        </div>
+
+        <!-- Acupuncture -->
+        <div class="video-card">
+            <div class="placeholder-video">
+                <div class="inner">
+                    <div class="emoji">🧘</div>
+                    <p><strong>Acupuncture &amp; TCM</strong></p>
+                    <p>YouTube · Coming soon</p>
+                </div>
+            </div>
+            <div class="video-info">
+                <span class="topic">TCM</span>
+                <h3>Trying Acupuncture in China — My First Time</h3>
+                <p>A vlogger documents their first acupuncture session at Chengdu University of TCM.</p>
+            </div>
+        </div>
+
+        <!-- Surgery / Major Procedure -->
+        <div class="video-card">
+            <div class="placeholder-video">
+                <div class="inner">
+                    <div class="emoji">💪</div>
+                    <p><strong>Knee Surgery</strong></p>
+                    <p>YouTube · Coming soon</p>
+                </div>
+            </div>
+            <div class="video-info">
+                <span class="topic">Surgery</span>
+                <h3>Knee Replacement in China: $10K vs $50K in the US</h3>
+                <p>A patient's journey through knee surgery at West China Hospital.</p>
+            </div>
+        </div>
+
+        <!-- LASIK -->
+        <div class="video-card">
+            <div class="placeholder-video">
+                <div class="inner">
+                    <div class="emoji">👁️</div>
+                    <p><strong>LASIK Eye Surgery</strong></p>
+                    <p>YouTube · Coming soon</p>
+                </div>
+            </div>
+            <div class="video-info">
+                <span class="topic">Vision</span>
+                <h3>LASIK in China: My Experience (Half the Price of the US)</h3>
+                <p>Day-by-day recovery log of a foreigner's LASIK procedure in Chengdu.</p>
+            </div>
+        </div>
+
+        <!-- Chinese Hospital Tour -->
+        <div class="video-card">
+            <div class="placeholder-video">
+                <div class="inner">
+                    <div class="emoji">🏥</div>
+                    <p><strong>Hospital Tour</strong></p>
+                    <p>YouTube · Coming soon</p>
+                </div>
+            </div>
+            <div class="video-info">
+                <span class="topic">Tour</span>
+                <h3>Inside One of China's Best Hospitals (West China Hospital)</h3>
+                <p>A foreign journalist tours one of Asia's largest medical centers.</p>
+            </div>
+        </div>
+
+        <!-- Medical Tourism General -->
+        <div class="video-card">
+            <div class="placeholder-video">
+                <div class="inner">
+                    <div class="emoji">✈️</div>
+                    <p><strong>Medical Tourism Guide</strong></p>
+                    <p>YouTube · Coming soon</p>
+                </div>
+            </div>
+            <div class="video-info">
+                <span class="topic">Guide</span>
+                <h3>Complete Guide: Medical Tourism to China in 2025</h3>
+                <p>Everything you need to know: visas, hospitals, costs, and what to expect.</p>
+            </div>
+        </div>
+
+        <!-- General Experience -->
+        <div class="video-card">
+            <div class="placeholder-video">
+                <div class="inner">
+                    <div class="emoji">🇨🇳</div>
+                    <p><strong>Why I Chose China</strong></p>
+                    <p>YouTube · Coming soon</p>
+                </div>
+            </div>
+            <div class="video-info">
+                <span class="topic">Story</span>
+                <h3>Why I Flew to China for Medical Treatment</h3>
+                <p>A personal story of an American patient navigating the Chinese healthcare system.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ===== WHAT TO DO ===== -->
+    <div style="background: #e8f5f0; border-radius: 12px; padding: 28px; margin-top: 40px;">
+        <h3 style="color: #0f5c44; margin-bottom: 12px;">🔍 视频来源指引 / Video Source Guide</h3>
+
+        <div style="background: #fff3e0; border-left: 4px solid #f5a623; padding: 14px 18px; margin-bottom: 20px; border-radius: 0 8px 8px 0;">
+            <strong>⚠️ 重要注意：</strong><br />
+            国内平台（B站、小红书、抖音、腾讯视频）的视频链接在美国<strong>可能无法访问或加载极慢</strong>。<br />
+            建议：将国内视频<strong>下载后重新上传到 YouTube</strong>（面向美国用户的最佳选择），或者直接使用 YouTube / TikTok 国际版的原始链接。
+        </div>
+
+        <p style="font-size: 0.9rem; margin-bottom: 8px;">推荐方法（按优先级排序）：</p>
+        <ol style="padding-left: 24px; font-size: 0.88rem; color: #444;">
+            <li style="margin-bottom: 8px;">
+                <strong>YouTube 原生搜索（最优）：</strong>直接搜 "medical tourism china", "china dentist cost", "acupuncture china foreigner", "china hospital english"。<br />
+                找到视频后，右键 → 复制嵌入代码 → 粘贴到上方占位区域。
+            </li>
+            <li style="margin-bottom: 8px;">
+                <strong>TikTok 国际版：</strong>搜 #ChinaMedicalTourism, #MedicalTravel, #DentalChina。用 TikTok 分享按钮 → 复制嵌入代码。
+            </li>
+            <li style="margin-bottom: 8px;">
+                <strong>国内视频 → 下载 → 上传 YouTube：</strong><br />
+                小红书上搜"外国人在华西""老外体验中国医疗""外国人在成都看病"，B站搜"美国人在中国看病"。<br />
+                用视频下载工具（如视频解析网站）下载后，上传到你的 YouTube 频道，再取英文标题。
+            </li>
+            <li style="margin-bottom: 8px;">
+                <strong>Facebook：</strong>加入 "Expats in Chengdu"、"China Medical Tourism" 等群组，转发相关帖子。
+            </li>
+        </ol>
+
+        <p style="font-size: 0.82rem; color: #888; margin-top: 12px;">💡 替换视频方法：找到你想要的 YouTube 视频 → 点击"分享" → "嵌入" → 复制 <code>&lt;iframe&gt;</code> 代码 → 替换上方对应卡片的 <code>placeholder-video</code> 区域。</p>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-section">
+        <h2>Ready to Start Your Own Story?</h2>
+        <a href="index.html#contact" class="btn">Get Your Free Quote →</a>
+    </div>
+
+</div>
+
+</body>
+</html>

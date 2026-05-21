@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PandaBridge — Terms of Service &amp; Service Agreement</title>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, serif;
+            color: #1a1a2e; line-height: 1.85;
+            background: #f5f5f5; padding: 0;
+        }
+        .page {
+            max-width: 800px; margin: 0 auto; background: #fff;
+            padding: 60px 64px; box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            min-height: 100vh;
+        }
+        @media (max-width: 640px) {
+            .page { padding: 32px 20px; }
+        }
+        h1 {
+            text-align: center; font-size: 1.6rem; font-weight: 700;
+            margin-bottom: 8px; color: #0f5c44;
+            border-bottom: 2px solid #0f5c44; padding-bottom: 16px;
+        }
+        .subtitle {
+            text-align: center; font-size: 0.88rem; color: #777; margin-bottom: 40px;
+        }
+        h2 {
+            font-size: 1.1rem; margin: 36px 0 12px; color: #1a7a5c;
+            border-left: 3px solid #1a7a5c; padding-left: 10px;
+        }
+        h3 {
+            font-size: 0.95rem; font-weight: 600; margin: 18px 0 6px; color: #333;
+        }
+        p, li { font-size: 0.9rem; color: #333; margin-bottom: 8px; }
+        ul { padding-left: 24px; margin-bottom: 14px; }
+        ul li { margin-bottom: 4px; }
+        .highlight {
+            background: #fff3e0; border-left: 3px solid #f5a623;
+            padding: 14px 18px; margin: 18px 0;
+            font-weight: 600; font-size: 0.9rem;
+        }
+        .highlight-warn {
+            background: #ffeaea; border-left: 3px solid #c0392b;
+            padding: 14px 18px; margin: 18px 0;
+            font-weight: 600; font-size: 0.9rem;
+        }
+
+        /* ===== SIGNATURE AREA ===== */
+        .sig-section {
+            margin-top: 50px; padding-top: 30px;
+            border-top: 1px dashed #ccc;
+        }
+        .sig-section h2 {
+            text-align: center; border-left: none; padding-left: 0;
+            margin-bottom: 24px;
+        }
+        .sig-row {
+            display: flex; justify-content: space-between; gap: 40px;
+            margin-bottom: 40px;
+        }
+        .sig-col {
+            flex: 1; min-width: 0;
+        }
+        .sig-col h4 {
+            font-size: 0.9rem; margin-bottom: 16px; color: #1a7a5c;
+            text-align: center;
+        }
+        .sig-field {
+            text-align: center;
+        }
+        .sig-line {
+            border-bottom: 1px solid #333; margin: 40px 0 6px;
+            position: relative;
+        }
+        .sig-line-label {
+            font-size: 0.78rem; color: #888; margin-top: 2px;
+        }
+        .sig-date {
+            font-size: 0.85rem; color: #555; margin-top: 16px;
+            text-align: center;
+        }
+        .sig-date span {
+            border-bottom: 1px solid #333; display: inline-block;
+            min-width: 180px; margin: 0 4px;
+        }
+
+        /* ===== E-SIGN BOX ===== */
+        .esign-box {
+            background: #e8f5f0; border: 1px solid #1a7a5c; border-radius: 8px;
+            padding: 20px 24px; margin: 30px 0;
+        }
+        .esign-box h3 {
+            color: #0f5c44; margin-bottom: 10px;
+        }
+        .esign-box p { font-size: 0.85rem; color: #444; }
+        .esign-box .check {
+            display: flex; align-items: flex-start; gap: 10px;
+            margin-top: 14px; font-size: 0.85rem;
+        }
+        .check input { margin-top: 3px; }
+
+        /* ===== SEAL BOX ===== */
+        .seal-box {
+            text-align: center; margin: 30px 0;
+            font-size: 0.85rem; color: #888;
+        }
+        .seal-box .placeholder {
+            display: inline-block; width: 120px; height: 120px;
+            border: 1px dashed #ccc; border-radius: 50%;
+            line-height: 120px; color: #bbb; font-size: 0.8rem;
+            margin-bottom: 8px;
+        }
+
+        /* ===== PRINT STYLES ===== */
+        @media print {
+            body { background: white; }
+            .page { box-shadow: none; padding: 40px; max-width: 100%; }
+            .esign-box { background: white; }
+            .no-print { display: none; }
+        }
+
+        .back-link {
+            text-align: center; margin: 20px 0;
+        }
+        .back-link a {
+            color: #1a7a5c; text-decoration: none; font-weight: 600;
+        }
+        .back-link a:hover { text-decoration: underline; }
+
+        .lang-toggle {
+            text-align: center; margin-bottom: 20px;
+        }
+        .lang-toggle button {
+            background: none; border: 1px solid #1a7a5c; color: #1a7a5c;
+            padding: 6px 16px; border-radius: 4px; cursor: pointer;
+            font-size: 0.85rem; margin: 0 4px;
+        }
+        .lang-toggle button.active {
+            background: #1a7a5c; color: white;
+        }
+        .cn { display: none; }
+    </style>
+</head>
+<body>
+
+<div class="page">
+
+    <div class="no-print back-link">
+        <a href="index.html">← Back to PandaBridge</a>
+    </div>
+
+    <h1>SERVICE AGREEMENT / 服务协议</h1>
+    <p class="subtitle">PandaBridge &mdash; Medical Concierge | Chengdu, China<br />Effective Date: <strong>2025</strong></p>
+
+    <div class="lang-toggle no-print">
+        <button id="btnEn" class="active" onclick="showLang('en')">English</button>
+        <button id="btnCn" onclick="showLang('cn')">中文</button>
+    </div>
+
+    <!-- ========== ENGLISH ========== -->
+    <div class="en">
+
+    <h2>1. Definitions</h2>
+    <p><strong>PandaBridge</strong> (&ldquo;we&rdquo;, &ldquo;us&rdquo;) is an independent concierge service operating in Chengdu, Sichuan, People&rsquo;s Republic of China.</p>
+    <p><strong>Client</strong> (&ldquo;you&rdquo;) is the individual receiving services.</p>
+    <p><strong>Services</strong> means the non-medical concierge services described in Section 2.</p>
+    <p><strong>Medical Provider</strong> means any hospital, clinic, or healthcare professional providing diagnosis or treatment to the Client.</p>
+
+    <h2>2. Scope of Services</h2>
+    <p>PandaBridge provides NON-MEDICAL concierge services only:</p>
+    <ul>
+        <li>Hospital / doctor recommendation based on described needs</li>
+        <li>Appointment scheduling and registration assistance</li>
+        <li>Airport pickup and drop-off</li>
+        <li>Hotel booking assistance</li>
+        <li>In-person interpretation and translation during medical visits</li>
+        <li>Private vehicle and driver arrangement</li>
+        <li>Medical records translation</li>
+        <li>Local guidance and logistical support</li>
+    </ul>
+
+    <div class="highlight-warn">
+        We do NOT provide: medical diagnosis, treatment, advice, prescriptions, or procedures.<br />
+        We are a logistical facilitator and translator &mdash; not a healthcare provider.
+    </div>
+
+    <h2>3. Fees and Payment</h2>
+    <p>All fees are in United States Dollars (USD). Payment methods: PayPal, bank wire transfer.</p>
+    <p>Full payment due before services commence. Client bears all bank / processing fees.</p>
+
+    <h2>4. Cancellation &amp; Refund</h2>
+    <ul>
+        <li><strong>7+ days before arrival:</strong> 80% refund</li>
+        <li><strong>3&ndash;6 days before arrival:</strong> 50% refund</li>
+        <li><strong>Less than 3 days:</strong> no refund</li>
+        <li><strong>After services start:</strong> no refund for unused days</li>
+    </ul>
+
+    <h2>5. Limitation of Liability &mdash; IMPORTANT</h2>
+    <div class="highlight-warn">
+        PandaBridge is NOT a medical provider. We make no warranties regarding medical quality, treatment outcomes, or Provider competence. Our total liability is limited to the total fees you paid.
+    </div>
+    <p>We are not liable for: medical complications, adverse outcomes, misdiagnosis, personal property loss, or indirect damages. You travel to China voluntarily and assume all associated risks. We strongly recommend you obtain <strong>travel insurance</strong> and <strong>medical insurance</strong>.</p>
+
+    <h2>6. Client Responsibilities</h2>
+    <p>Provide accurate medical history. Follow hospital rules. Pay medical fees directly to the Provider. Obtain appropriate visa and travel documents. Treat our staff with respect.</p>
+
+    <h2>7. Privacy</h2>
+    <p>Your health information is kept confidential and shared only as necessary to provide Services. We do not sell your data.</p>
+
+    <h2>8. Governing Law &amp; Dispute Resolution</h2>
+    <p><strong>This Agreement is governed by the laws of the People&rsquo;s Republic of China.</strong></p>
+    <p>Any dispute shall be resolved through good-faith negotiation first (30 days). If unresolved, the dispute shall be submitted to the competent court in <strong>Chengdu, Sichuan Province, PRC</strong>.</p>
+    <p>By using our services, you consent to the jurisdiction of Chinese courts.</p>
+
+    <h2>9. Force Majeure</h2>
+    <p>We are not liable for failure due to events beyond our control: natural disasters, epidemics, government actions, war, visa denial, airline cancellations, etc.</p>
+
+    <h2>10. Severability &amp; Entire Agreement</h2>
+    <p>If any term is unenforceable, the remainder stays in effect. This Agreement is the complete understanding between the parties.</p>
+
+    <!-- ===== SIGNATURE BLOCK ====-->
+    <div class="sig-section">
+        <h2>SIGNATURES / 签字盖章</h2>
+
+        <p style="text-align:center; margin-bottom:30px; font-size:0.85rem; color:#666;">
+            This Agreement may be executed in counterparts.<br />
+            Electronic signatures are legally valid under the U.S. ESIGN Act and the PRC Electronic Signature Law.
+        </p>
+
+        <div class="sig-row">
+            <div class="sig-col">
+                <h4>PANDA BRIDGE<br /><span style="font-weight:400; font-size:0.8rem;">(Service Provider / 服务提供方)</span></h4>
+                <div class="sig-field">
+                    <div class="sig-line"></div>
+                    <div class="sig-line-label">Authorized Signature / 授权签字</div>
+                </div>
+                <div class="sig-date">
+                    Date / 日期: <span>&nbsp;</span>
+                </div>
+                <div class="seal-box">
+                    <div class="placeholder">[Seal / 盖章处]</div>
+                    <div>(Optional / 可选)</div>
+                </div>
+                <p style="text-align:center; font-size:0.8rem; color:#888;">
+                    PandaBridge<br />Chengdu, Sichuan, PRC<br />📞 +86 134 0862 7833<br />📧 85608869@qq.com
+                </p>
+            </div>
+
+            <div class="sig-col">
+                <h4>CLIENT<br /><span style="font-weight:400; font-size:0.8rem;">(客户)</span></h4>
+                <div class="sig-field">
+                    <div class="sig-line"></div>
+                    <div class="sig-line-label">Signature / 签字</div>
+                </div>
+                <div class="sig-field">
+                    <div class="sig-line"></div>
+                    <div class="sig-line-label">Printed Name / 姓名</div>
+                </div>
+                <div class="sig-date">
+                    Date / 日期: <span>&nbsp;</span>
+                </div>
+                <p style="text-align:center; font-size:0.8rem; color:#888;">
+                    Client Name<br />Client Address<br />Client Email<br />Client Phone
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== E-SIGN EXPLANATION ===== -->
+    <div class="esign-box">
+        <h3>🔐 Electronic Signature Options</h3>
+        <p>You do <em>not</em> need to print, sign, and scan this document. This Agreement can be legally executed via any of the following methods:</p>
+        <ol style="padding-left:24px; margin:12px 0; font-size:0.85rem;">
+            <li style="margin-bottom:6px;"><strong>DocuSign</strong> &mdash; We send a DocuSign link via email. You sign digitally. Legally binding under U.S. ESIGN Act and PRC Electronic Signature Law. <em>(Recommended for Premium Care clients)</em></li>
+            <li style="margin-bottom:6px;"><strong>Email Confirmation</strong> &mdash; You reply to our confirmation email with &ldquo;I agree to the PandaBridge Service Agreement&rdquo; + your name and date. This creates a binding contract.</li>
+            <li style="margin-bottom:6px;"><strong>Website Checkout</strong> &mdash; At the time of booking/payment, you check &ldquo;I have read and agree to the Terms of Service.&rdquo; Your payment serves as acceptance.</li>
+            <li style="margin-bottom:6px;"><strong>Signed PDF</strong> &mdash; You may print, sign, scan, and email a signed copy. Equally valid.</li>
+        </ol>
+        <p style="font-size:0.8rem; color:#888; margin-top:10px;">
+            ✅ Under both U.S. and Chinese law, electronic signatures and email confirmation carry the same legal weight as ink signatures for service agreements of this nature. No physical stamp or notarization is required for validity.
+        </p>
+    </div>
+
+    </div><!-- /.en -->
+
+    <!-- ========== CHINESE ========== -->
+    <div class="cn">
+
+    <h2>1. 定义</h2>
+    <p><strong>PandaBridge</strong>（"我方"）是在中华人民共和国四川省成都市运营的独立管家服务。</p>
+    <p><strong>客户</strong>（"您"）是接受服务的个人。</p>
+    <p><strong>服务</strong> 指第2条所述的非医疗管家服务。</p>
+    <p><strong>医疗服务提供方</strong> 指为客户提供诊断或治疗的医院、诊所或医疗专业人员。</p>
+
+    <h2>2. 服务范围</h2>
+    <p>PandaBridge <strong>仅</strong>提供非医疗管家服务：</p>
+    <ul>
+        <li>根据需求推荐医院/医生</li>
+        <li>协助预约挂号</li>
+        <li>接机和送机</li>
+        <li>协助预订酒店</li>
+        <li>就诊期间陪同口译</li>
+        <li>安排私人车辆及司机</li>
+        <li>医疗记录翻译</li>
+        <li>当地导览及后勤支持</li>
+    </ul>
+
+    <div class="highlight-warn">
+        我方<strong>不</strong>提供：医疗诊断、治疗、建议、处方或任何医疗程序。<br />
+        我方仅为后勤协调者和翻译者，非医疗服务提供方。
+    </div>
+
+    <h2>3. 费用与支付</h2>
+    <p>所有费用以美元计价。支付方式：PayPal、银行电汇。服务开始前须付清全款。客户承担所有银行/处理费用。</p>
+
+    <h2>4. 取消与退款</h2>
+    <ul>
+        <li><strong>到达前7天以上取消：</strong>退80%</li>
+        <li><strong>到达前3-6天取消：</strong>退50%</li>
+        <li><strong>到达前不足3天：</strong>不退</li>
+        <li><strong>服务开始后：</strong>未使用天数不退</li>
+    </ul>
+
+    <h2>5. 责任限制——重要</h2>
+    <div class="highlight-warn">
+        PandaBridge <strong>非</strong>医疗服务提供方。我方不对医疗质量、治疗结果或医院能力作任何保证。我方总责任限于您已支付的服务费用总额。
+    </div>
+    <p>我方不对以下情形负责：医疗并发症、不良结果、误诊、个人财产损失或间接损失。您自愿前往中国并承担相关风险。强烈建议您购买<strong>旅行保险</strong>和<strong>医疗保险</strong>。</p>
+
+    <h2>6. 客户责任</h2>
+    <p>提供准确的病史。遵守医院规定。将医疗费用直接支付给医院。取得适当的签证和旅行证件。尊重我方工作人员。</p>
+
+    <h2>7. 隐私</h2>
+    <p>您的健康信息予以保密，仅在提供服务必要时分享。我方不出售您的数据。</p>
+
+    <h2>8. 适用法律与争议解决</h2>
+    <p><strong>本协议受中华人民共和国法律管辖。</strong></p>
+    <p>任何争议应首先通过30天善意协商解决。协商不成，提交<strong>中华人民共和国四川省成都市</strong>有管辖权的法院。</p>
+    <p>使用我方服务即表示您同意接受中国法院的管辖。</p>
+
+    <h2>9. 不可抗力</h2>
+    <p>我方不对超出合理控制的事件导致的履约失败负责：自然灾害、流行病、政府行为、战争、签证拒签、航班取消等。</p>
+
+    <h2>10. 可分割性与完整协议</h2>
+    <p>任一条款不可执行不影响其余条款。本协议为双方之间的完整约定。</p>
+
+    <!-- ===== SIGNATURE (CN) ===== -->
+    <div class="sig-section">
+        <h2>签字盖章</h2>
+        <p style="text-align:center; margin-bottom:30px; font-size:0.85rem; color:#666;">
+            本协议可签署多份副本。<br />
+            根据美国《ESIGN法案》和中国《电子签名法》，电子签名具有法律效力。
+        </p>
+        <div class="sig-row">
+            <div class="sig-col">
+                <h4>PANDA BRIDGE<br /><span style="font-weight:400; font-size:0.8rem;">（服务提供方）</span></h4>
+                <div class="sig-field">
+                    <div class="sig-line"></div>
+                    <div class="sig-line-label">授权签字</div>
+                </div>
+                <div class="sig-date">
+                    日期: <span>&nbsp;</span>
+                </div>
+                <div class="seal-box">
+                    <div class="placeholder">[盖章处]</div>
+                </div>
+                <p style="text-align:center; font-size:0.8rem; color:#888;">
+                    PandaBridge<br />四川成都<br />📞 +86 134 0862 7833<br />📧 85608869@qq.com
+                </p>
+            </div>
+            <div class="sig-col">
+                <h4>客户</h4>
+                <div class="sig-field">
+                    <div class="sig-line"></div>
+                    <div class="sig-line-label">签字</div>
+                </div>
+                <div class="sig-field">
+                    <div class="sig-line"></div>
+                    <div class="sig-line-label">姓名</div>
+                </div>
+                <div class="sig-date">
+                    日期: <span>&nbsp;</span>
+                </div>
+                <p style="text-align:center; font-size:0.8rem; color:#888;">
+                    客户姓名<br />地址<br />邮箱<br />电话
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- E-SIGN (CN) -->
+    <div class="esign-box">
+        <h3>🔐 电子签约方式</h3>
+        <p>您<em>无需</em>打印、签字、扫描此文件。本协议可通过以下任一方式合法生效：</p>
+        <ol style="padding-left:24px; margin:12px 0; font-size:0.85rem;">
+            <li style="margin-bottom:6px;"><strong>DocuSign</strong> — 我方通过邮件发送 DocuSign 链接，您在线电子签名。受美国 ESIGN 法案和中国《电子签名法》保护。（推荐 Premium Care 客户使用）</li>
+            <li style="margin-bottom:6px;"><strong>邮件确认</strong> — 您回复确认邮件，写明"我同意 PandaBridge 服务协议"+ 姓名 + 日期。此回复构成有效合同。</li>
+            <li style="margin-bottom:6px;"><strong>网站结账时勾选</strong> — 预订/付款时勾选"我已阅读并同意服务条款"。付款行为即视为接受条款。</li>
+            <li style="margin-bottom:6px;"><strong>签字扫描件</strong> — 您可打印、签字、扫描后邮件返回。同等有效。</li>
+        </ol>
+        <p style="font-size:0.8rem; color:#888; margin-top:10px;">
+            ✅ 根据中美两国法律，对于此类服务合同，电子签名和邮件确认与手写签名具有同等法律效力。无需实物盖章或公证。
+        </p>
+    </div>
+
+    </div><!-- /.cn -->
+
+    <p style="text-align:center; margin-top:40px; font-size:0.8rem; color:#aaa;">
+        &copy; 2025 PandaBridge. All rights reserved.<br />
+        <a href="index.html" style="color:#1a7a5c;">← Back to PandaBridge Home</a>
+    </p>
+
+</div><!-- /.page -->
+
+<script>
+function showLang(lang) {
+    document.querySelectorAll('.en').forEach(e => e.style.display = lang === 'en' ? 'block' : 'none');
+    document.querySelectorAll('.cn').forEach(e => e.style.display = lang === 'cn' ? 'block' : 'none');
+    document.getElementById('btnEn').classList.toggle('active', lang === 'en');
+    document.getElementById('btnCn').classList.toggle('active', lang === 'cn');
+}
+// Default: English
+showLang('en');
+</script>
+
+</body>
+</html>
