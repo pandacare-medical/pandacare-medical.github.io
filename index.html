@@ -394,7 +394,7 @@
                     <li>2 days in-hospital translation</li>
                     <li>Airport pickup (one way)</li>
                     <li>Hotel recommendation &amp; booking</li>
-                    <li>24/7 WhatsApp support</li>
+                    <li>24/7 email support</li>
                 </ul>
                 <a href="#contact" class="btn btn-primary">Choose Standard</a>
             </div>
@@ -431,7 +431,7 @@
             <div class="step">
                 <div class="icon">📞</div>
                 <h3>Reach Out</h3>
-                <p>Send us a message on WhatsApp or fill out the contact form. Tell us what you need — we'll respond within 24 hours.</p>
+                <p>Send us a message via email or fill out the contact form. Tell us what you need — we'll respond within 24 hours.</p>
             </div>
             <div class="step">
                 <div class="icon">🏥</div>
@@ -606,19 +606,51 @@
         <p class="section-sub">Tell us about your needs and we'll get back to you within 24 hours.</p>
         <div class="contact-grid">
             <div class="contact-info">
-                <h3>📱 Reach Us Directly</h3>
-                <p>💬 <strong>WhatsApp:</strong> <a href="https://wa.me/8613408627833" target="_blank">+86 134 0862 7833</a></p>
+                <h3>📧 Reach Us Directly</h3>
                 <p>📧 <strong>Email:</strong> <a href="mailto:85608869@qq.com">85608869@qq.com</a></p>
                 <p>⏰ <strong>Response time:</strong> Within 24 hours</p>
                 <p>📍 <strong>Location:</strong> Chengdu, Sichuan, China</p>
                 <p style="margin-top: 20px; opacity: 0.8; font-size: 0.9rem;">
-                    Prefer to talk now? Tap the WhatsApp link above and send us a message. We speak English and Chinese.
+                    Fill out the form or email us directly. We respond to all inquiries within 24 hours.
                 </p>
             </div>
-            <form class="contact-form" id="contactForm">
+            <form class="contact-form" id="contactForm" action="https://formsubmit.co/85608869@qq.com" method="POST">
+                <!-- Formsubmit.co hidden config -->
+                <input type="hidden" name="_subject" value="New PandaBridge Inquiry" />
+                <input type="hidden" name="_template" value="table" />
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_next" value="https://pandabridge-cn.github.io/pandabridge/thanks.html" />
+                <input type="hidden" name="_autoresponse" value="Thank you for contacting PandaBridge!
+
+We've received your inquiry and will respond within 24 hours.
+
+PAYMENT INFORMATION:
+If you'd like to proceed with booking, you can send payment via ACH transfer:
+
+Account Holder: Nan Chen
+Routing Number: 101019628
+Account Number: 210167673399
+Bank: Wise US Inc
+Account Type: Checking
+
+Or for international wire transfers, use SWIFT: TRWIUS35XXX
+
+TERMS OF SERVICE:
+By making payment, you agree to our Terms of Service at:
+https://pandabridge-cn.github.io/pandabridge/terms.html
+
+NEXT STEPS:
+We'll email you within 24 hours to confirm your booking and finalize details.
+
+Questions? Reply to this email.
+
+—
+PandaBridge
+Chengdu, China
+Email: 85608869@qq.com" />
                 <input type="text" name="name" placeholder="Full Name" required />
                 <input type="email" name="email" placeholder="Email Address" required />
-                <input type="tel" name="phone" placeholder="Phone / WhatsApp Number" />
+                <input type="tel" name="phone" placeholder="Phone Number (optional)" />
                 <select name="service" required>
                     <option value="">What service are you interested in?</option>
                     <option value="consultation">Consultation ($99)</option>
@@ -647,7 +679,7 @@
 <footer>
     <div class="container">
         <p style="margin-bottom: 8px;"><strong>PandaBridge</strong> — Your Medical Concierge in Chengdu, China</p>
-        <p>📞 <a href="https://wa.me/8613408627833" target="_blank">WhatsApp: +86 134 0862 7833</a> &nbsp;|&nbsp; 📧 <a href="mailto:85608869@qq.com">85608869@qq.com</a></p>
+        <p>📧 <a href="mailto:85608869@qq.com">85608869@qq.com</a></p>
         <p style="margin-bottom: 8px;"><a href="/terms.html" style="color: var(--accent);">Terms of Service</a></p>
         <p style="margin-top: 4px; opacity: 0.6;">&copy; 2025 PandaBridge. All rights reserved.</p>
     </div>
@@ -667,29 +699,9 @@
         answer.classList.toggle('open');
     }
 
-    // Contact form handler
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        const data = new FormData(this);
-        const name = data.get('name');
-        const email = data.get('email');
-        const service = data.get('service');
-        const message = data.get('message');
-
-        // Build WhatsApp message
-        const text = encodeURIComponent(
-            `Hi! I'm interested in PandaBridge services.\n\n` +
-            `Name: ${data.get('name')}\n` +
-            `Email: ${data.get('email')}\n` +
-            `Phone: ${data.get('phone') || 'Not provided'}\n` +
-            `Service: ${data.get('service')}\n` +
-            `Message: ${data.get('message')}`
-        );
-        window.open(`https://wa.me/8613408627833?text=${text}`, '_blank');
-
-        alert('Thank you! You\'ll be redirected to WhatsApp to complete your inquiry. We\'ll respond within 24 hours.');
-        this.reset();
-    });
+    // Contact form — submitted to Formsubmit.co
+    // Confirmation and auto-reply are handled automatically.
+    // No JavaScript needed for form submission.
 </script>
 
 </body>
