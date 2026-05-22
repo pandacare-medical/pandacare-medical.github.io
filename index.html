@@ -614,44 +614,11 @@
                     Fill out the form or email us directly. We respond to all inquiries within 24 hours.
                 </p>
             </div>
-            <form class="contact-form" id="contactForm" action="https://formsubmit.co/85608869@qq.com" method="POST">
-                <!-- Formsubmit.co hidden config -->
-                <input type="hidden" name="_subject" value="New PandaBridge Inquiry" />
-                <input type="hidden" name="_template" value="table" />
-                <input type="hidden" name="_captcha" value="false" />
-                <input type="hidden" name="_next" value="https://pandabridge-cn.github.io/pandabridge/thanks.html" />
-                <input type="hidden" name="_autoresponse" value="Thank you for contacting PandaBridge!
-
-We've received your inquiry and will respond within 24 hours.
-
-PAYMENT INFORMATION:
-If you'd like to proceed with booking, you can send payment via ACH transfer:
-
-Account Holder: Nan Chen
-Routing Number: 101019628
-Account Number: 210167673399
-Bank: Wise US Inc
-Account Type: Checking
-
-Or for international wire transfers, use SWIFT: TRWIUS35XXX
-
-TERMS OF SERVICE:
-By making payment, you agree to our Terms of Service at:
-https://pandabridge-cn.github.io/pandabridge/terms.html
-
-NEXT STEPS:
-We'll email you within 24 hours to confirm your booking and finalize details.
-
-Questions? Reply to this email.
-
-—
-PandaBridge
-Chengdu, China
-Email: 85608869@qq.com" />
-                <input type="text" name="name" placeholder="Full Name" required />
-                <input type="email" name="email" placeholder="Email Address" required />
-                <input type="tel" name="phone" placeholder="Phone Number (optional)" />
-                <select name="service" required>
+            <form class="contact-form" id="contactForm" onsubmit="return submitInquiry(event)">
+                <input type="text" name="name" id="formName" placeholder="Full Name" required />
+                <input type="email" name="email" id="formEmail" placeholder="Email Address" required />
+                <input type="tel" name="phone" id="formPhone" placeholder="Phone Number (optional)" />
+                <select name="service" id="formService" required>
                     <option value="">What service are you interested in?</option>
                     <option value="consultation">Consultation ($99)</option>
                     <option value="standard">Standard Care ($599)</option>
@@ -662,7 +629,7 @@ Email: 85608869@qq.com" />
                     <option value="surgery">Surgery</option>
                     <option value="other">Other</option>
                 </select>
-                <textarea name="message" placeholder="Tell us about your condition, what treatment you're looking for, and any questions..." required></textarea>
+                <textarea name="message" id="formMessage" placeholder="Tell us about your condition, what treatment you're looking for, and any questions..." required></textarea>
                 <div class="agreement-check" style="margin-bottom: 16px; display: flex; align-items: flex-start; gap: 10px;">
                     <input type="checkbox" id="agreeTerms" name="agreeTerms" required style="margin-top: 4px; width: auto;" />
                     <label for="agreeTerms" style="font-size: 0.88rem; color: var(--white); cursor: pointer;">
@@ -671,6 +638,26 @@ Email: 85608869@qq.com" />
                 </div>
                 <button type="submit" class="btn btn-primary">Send Inquiry</button>
             </form>
+
+            <!-- Success overlay -->
+            <div id="formOverlay" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(15,92,68,0.95); z-index:9999; align-items:center; justify-content:center; text-align:center; padding:24px;">
+                <div style="background:white; border-radius:16px; padding:40px 32px; max-width:480px; width:100%; box-shadow:0 8px 32px rgba(0,0,0,0.2);">
+                    <div style="font-size:3rem; margin-bottom:12px;">✅</div>
+                    <h2 style="color:#0f5c44; margin-bottom:8px;">Inquiry Submitted!</h2>
+                    <p style="color:#555; font-size:0.95rem; line-height:1.6; margin-bottom:16px;">
+                        We'll get back to you within <strong>24 hours</strong>.<br />
+                        A new email window has opened — just click <strong>Send</strong> to confirm.
+                    </p>
+                    <div style="background:#e8f5f0; border-radius:10px; padding:16px 20px; text-align:left; font-size:0.85rem; line-height:1.8;">
+                        <strong>💡 Payment Info (ACH Transfer):</strong><br />
+                        Account: Nan Chen<br />
+                        Routing: 101019628<br />
+                        Account #: 210167673399<br />
+                        <span style="font-size:0.8rem;">SWIFT: TRWIUS35XXX (international)</span>
+                    </div>
+                    <a href="index.html" style="display:inline-block; margin-top:16px; background:#1a7a5c; color:white; padding:12px 28px; border-radius:8px; text-decoration:none; font-weight:600;">← Back to PandaBridge</a>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -699,9 +686,33 @@ Email: 85608869@qq.com" />
         answer.classList.toggle('open');
     }
 
-    // Contact form — submitted to Formsubmit.co
-    // Confirmation and auto-reply are handled automatically.
-    // No JavaScript needed for form submission.
+    // Contact form — mailto with success overlay
+    function submitInquiry(e) {
+        e.preventDefault();
+        const name = document.getElementById('formName').value;
+        const email = document.getElementById('formEmail').value;
+        const phone = document.getElementById('formPhone').value || 'Not provided';
+        const service = document.getElementById('formService').value;
+        const message = document.getElementById('formMessage').value;
+
+        // Show success overlay
+        document.getElementById('formOverlay').style.display = 'flex';
+
+        // Also open email client as backup
+        const body = encodeURIComponent(
+            'Hello PandaBridge,\n\n' +
+            'Here is my inquiry:\n\n' +
+            'Name: ' + name + '\n' +
+            'Email: ' + email + '\n' +
+            'Phone: ' + phone + '\n' +
+            'Service Interested: ' + service + '\n\n' +
+            'Message:\n' + message + '\n\n' +
+            'I agree to the Terms of Service.\n' +
+            '(Sent from PandaBridge website)'
+        );
+        window.open('mailto:85608869@qq.com?subject=PandaBridge Inquiry from ' + encodeURIComponent(name) + '&body=' + body, '_blank');
+        return false;
+    }
 </script>
 
 </body>
