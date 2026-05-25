@@ -614,7 +614,11 @@
                     Fill out the form or email us directly. We respond to all inquiries within 24 hours.
                 </p>
             </div>
-            <form class="contact-form" id="contactForm" onsubmit="return submitInquiry(event)">
+            <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="ee58e6fe-7c74-4e0a-aa58-3ad0573cef92" />
+                <input type="hidden" name="redirect" value="https://pandacare-medical.github.io/thanks.html" />
+                <input type="hidden" name="from_name" value="Pandacare Medical Website" />
+                <input type="hidden" name="subject" value="New Inquiry from Pandacare Medical" />
                 <input type="text" name="name" id="formName" placeholder="Full Name" required />
                 <input type="email" name="email" id="formEmail" placeholder="Email Address" required />
                 <input type="tel" name="phone" id="formPhone" placeholder="Phone Number (optional)" />
@@ -639,25 +643,8 @@
                 <button type="submit" class="btn btn-primary">Send Inquiry</button>
             </form>
 
-            <!-- Success overlay -->
-            <div id="formOverlay" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(15,92,68,0.95); z-index:9999; align-items:center; justify-content:center; text-align:center; padding:24px;">
-                <div style="background:white; border-radius:16px; padding:40px 32px; max-width:480px; width:100%; box-shadow:0 8px 32px rgba(0,0,0,0.2);">
-                    <div style="font-size:3rem; margin-bottom:12px;">✅</div>
-                    <h2 style="color:#0f5c44; margin-bottom:8px;">Inquiry Submitted!</h2>
-                    <p style="color:#555; font-size:0.95rem; line-height:1.6; margin-bottom:16px;">
-                        We'll get back to you within <strong>24 hours</strong>.<br />
-                        A new email window has opened — just click <strong>Send</strong> to confirm.
-                    </p>
-                    <div style="background:#e8f5f0; border-radius:10px; padding:16px 20px; text-align:left; font-size:0.85rem; line-height:1.8;">
-                        <strong>💡 Payment Info (ACH Transfer):</strong><br />
-                        Account: Nan Chen<br />
-                        Routing: 101019628<br />
-                        Account #: 210167673399<br />
-                        <span style="font-size:0.8rem;">SWIFT: TRWIUS35XXX (international)</span>
-                    </div>
-                    <a href="index.html" style="display:inline-block; margin-top:16px; background:#1a7a5c; color:white; padding:12px 28px; border-radius:8px; text-decoration:none; font-weight:600;">← Back to Pandacare Medical</a>
-                </div>
-            </div>
+            <!-- Success overlay (visible after form redirects back from thanks.html? No — Web3Forms handles redirect) -->
+            <!-- This overlay is kept for non-JS fallback, but Web3Forms will redirect to thanks.html -->
         </div>
     </div>
 </section>
@@ -684,34 +671,6 @@
         el.classList.toggle('open');
         const answer = el.nextElementSibling;
         answer.classList.toggle('open');
-    }
-
-    // Contact form — mailto with success overlay
-    function submitInquiry(e) {
-        e.preventDefault();
-        const name = document.getElementById('formName').value;
-        const email = document.getElementById('formEmail').value;
-        const phone = document.getElementById('formPhone').value || 'Not provided';
-        const service = document.getElementById('formService').value;
-        const message = document.getElementById('formMessage').value;
-
-        // Show success overlay
-        document.getElementById('formOverlay').style.display = 'flex';
-
-        // Also open email client as backup
-        const body = encodeURIComponent(
-            'Hello Pandacare Medical,\n\n' +
-            'Here is my inquiry:\n\n' +
-            'Name: ' + name + '\n' +
-            'Email: ' + email + '\n' +
-            'Phone: ' + phone + '\n' +
-            'Service Interested: ' + service + '\n\n' +
-            'Message:\n' + message + '\n\n' +
-            'I agree to the Terms of Service.\n' +
-            '(Sent from Pandacare Medical website)'
-        );
-        window.open('mailto:cn85608869@gmail.com?subject=Pandacare Medical Inquiry from ' + encodeURIComponent(name) + '&body=' + body, '_blank');
-        return false;
     }
 </script>
 
